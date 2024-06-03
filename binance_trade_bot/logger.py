@@ -4,7 +4,6 @@ from .notifications import NotificationHandler
 
 
 class Logger:
-
     Logger = None
     NotificationHandler = None
 
@@ -30,7 +29,6 @@ class Logger:
         self.NotificationHandler = NotificationHandler(enable_notifications)
 
     def log(self, message, level="info", notification=True):
-
         if level == "info":
             self.Logger.info(message)
         elif level == "warning":

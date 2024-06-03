@@ -26,7 +26,7 @@ class Strategy(AutoTrader):
         current_coin_price = self.manager.get_ticker_price(current_coin + self.config.BRIDGE)
 
         if current_coin_price is None:
-            self.logger.info("Skipping scouting... current coin {} not found".format(current_coin + self.config.BRIDGE))
+            self.logger.info(f"Skipping scouting... current coin {current_coin + self.config.BRIDGE} not found")
             return
 
         self._jump_to_best_coin(current_coin, current_coin_price)
